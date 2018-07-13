@@ -1,0 +1,50 @@
+
+
+
+Differences in function syntax in ES6 is a factor in how well my code runs.  
+
+For example:
+
+I made progress in my handleIncrement function being able to work.  Previously I had syntax of:
+            
+            "
+            handleIncrement () {
+
+            }
+                                "
+
+Whereas now, I have the syntax of:
+            "
+            handleIncrement = () => {
+
+            }
+                                "
+
+Now, this variation of handleIncrement is beneifical because I am able to call this method from App.js where it is defined as well as utilizing the ability to pass arguments through the function if necessary.
+
+*talk about difficulties using () vs {} in class components
+    -mention render() function allows for dynamic changes on webpage. 
+
+
+
+07/12/2018 11:22 A
+The App works but there is one bug preventing the application from full functionality.
+
+So all the functions work and the incrementing of the score when clicking on an image works.  However, in order for this to work.  I must click on a given image, click the score counter, then click on that same image again, for the score to increase. 
+
+My next idea to get this to work is to stick the handleIncrement inside of the characters function.  My reasoning for this is because right now the counter increment requires two actions, click on the image, then click on the score counter, and back to the image.   
+
+I'm hoping that if I can include the handleIncrement function inside shuffleCharacters function, the score will increase and the pictures will shuffle in one fell swoop opposed to multiple steps.  
+
+It is as though the shuffle characters works, but the user must click the score to toggle the  handleIncrement to work. 
+
+07/12/2018 
+3:30  PM
+
+the application currently works fully functional in terms of clicking and shuffling. 
+
+The resolution worked when I added the handleIncrement(e) function as the last line of code in the shuffleCharacters(e) function.
+    - It is essential to include the event argument in this.handleIncrement(e). 
+
+
+    create repo, git clone, then create react app 

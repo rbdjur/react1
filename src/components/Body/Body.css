@@ -1,0 +1,17 @@
+#main {
+    width: 10rem;
+    text-align:center;
+}
+
+#title {
+    text-align:center;
+}
+
+#points {
+    position:center;
+}
+
+#test {
+    display:flex;
+
+}
