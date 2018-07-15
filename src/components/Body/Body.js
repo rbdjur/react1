@@ -34,17 +34,24 @@ class Body extends React.Component {
                 <div className="row">
                     <div className="card text-center" id="main"
                     
-                    onClick={() => this.props.stuff}
+                    // onClick={() => this.props.stuff}
 
                     // onClick={this.props.handleClick}
                     // handleClick={this.props.stuff}
                     >
-                        <img onClick={this.props.handleClick}
+
+                        <img 
+                        // Working function directly below
+                        onClick={this.props.handleClick}
+
+                        // onClick={() => props.handleClick}
+
                         // handleClick={this.props.onClick} 
                         className="card-img-top" src={this.props.image} alt={this.props.name} />
                         <div className="card-body">
                             <h5 className="card-title">{this.props.name}</h5>
                             <p className="card-text">{this.props.bio}</p>
+                            
                         </div>
                     </div>     
                 </div>

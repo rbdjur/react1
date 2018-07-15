@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Body from './components/Body/Body';
 import Jumbotron from './components/Jumbotron/Jumbotron';
@@ -6,92 +6,61 @@ import Characters from "./Characters";
 import Counter from './components/Counter/Counter';
 // import { escapeComponent } from '../node_modules/uri-js';
 
-
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.shuffleCharacters = this.shuffleCharacters.bind(this);
     // this.handleIncrement = this.handleIncrement.bind(this)
-
   }
 
-  // constructor() {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this)
-  // }
-
+  // establish initial state
   state = {
     Characters,
-    count: 0, 
-    // set state for unshuffled vs shuffled 
-    // unshuffled: unshuffled
-  }; 
+    count: 0,
+    clicked: []
+  };
 
 
-  // handleIncrement () {
-  //   console.log("inside handleIncrement");
-  //   // this.setState = this.setState.bind(this); 
-  //   // We always use the setState method to update a component's state
-   
-  //   this.setState({ count: this.state.count + 1 });
-  // };
-
-
-
-  /*
-  ------------------------------------------------
-    Furthest function progress (07/12/2018 10:30A)
-  ------------------------------------------------
-  */
-
-  // handleIncrement = (e) => {
-  //   console.log("App.js handleIncrement");
-  //   e.preventDefault();
-
-  //   // We always use the setState method to update a component's state
-  //   // this({ count: this.state.count + 1 });
-  //     this.setState({ count: this.state.count + 1 }); 
-  // }  
-
-  handleIncrement = (e) => {
-    e.preventDefault();
+  handleIncrement = () => {
+    // e.preventDefault();
     console.log("Inside App.js handleIncrement + this.state.count", this.state.count)
 
     // We always use the setState method to update a component's state
     // this({ count: this.state.count + 1 });
-      this.setState({ count: this.state.count + 1 }); 
-  }  
-
-  /*
-  ------------------------------------------------
-            Original Handle Increment Fxn
-  ------------------------------------------------
-  */
+    this.setState({ count: this.state.count + 1 });
+  }
 
 
-// ORIGINAL handleIncrement function
-  // handleIncrement () {
-  //   console.log("inside handleIncrement");
-  //   // We always use the setState method to update a component's state
-  //   // let score = this.state.count +1;
-
-
-  //   // this.setState({count: score });
-  //   this.setState({ count: this.state.count + 1 });
-  // };
-
-
-  shuffleCharacters (e) {
-    e.preventDefault();
+  shuffleCharacters = (character) => {
+    // e.preventDefault();
+    console.log('this is character name', character.name)
+    console.log("shuffleCharacters id", character.id)
     console.log("inside App.js shuffleCharacters method", this.state.Characters);
     console.log("this.state.count", this.state.count)
     let shuffled = this.shuffleArray(this.state.Characters);
-    this.setState({Characters: shuffled});
-    this.handleIncrement(e);
+
+
+    if (this.state.clicked.indexOf(character) === 0) {
+      console.log("inside if-statement inside shuffleCharacters + Character.id=" + this.name)
+      //console.log("this is props.id", props.id)
+      this.setState({
+        Characters: shuffled,
+        clicked: [...this.state.clicked, this.key],
+        score: this.state.score + 1
+      })
+    } else {
+      this.setState({
+        Characters: shuffled,
+        clicked: [],
+        score: 0
+      })
+    }
+    // this.setState({Characters: shuffled});
+    this.handleIncrement();
   }
 
-  shuffleArray (array) {
+  shuffleArray(array) {
     let i = array.length - 1;
     for (; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -102,42 +71,43 @@ class App extends Component {
     return array;
   }
 
+  render() {
 
-  render () {
     return (
       <div>
       <div>
-        <Navbar/>
-        <Jumbotron/>
-        <Counter   
-         handleClick={this.handleIncrement}
-         setState={this.state.count}
-        />
+        <div>
+          <Navbar />
+          <Jumbotron />
+          <Counter
+            handleClick={this.handleIncrement}
+            setState={this.state.count}
+          />
         </div>
         <div id="test">
 
 
-        {this.state.Characters.map(Character => (
-          <Body
+          {this.state.Characters.map(Character => (
+            <Body
 
-          handleClick={this.shuffleCharacters}
+              handleClick={() => this.shuffleCharacters(Character)}
 
-          onClick={this.handleIncrement}
+              onClick={this.handleIncrement}
 
-
-         
-          
-          // {this.shuffleCharacters.bind(this)}
-          key={Character.id}
-          image={Character.image}
-          name={Character.name}
-          bio={Character.bio}
+              // Props
+              key={Character.id}
+              id={Character.id}
+              image={Character.image}
+              name={Character.name}
+              bio={Character.bio}
 
 
-          />
-        ))}
+            />
+          ))}
         </div>
-        </div>
+      </div>
+      </div>
+
     );
   }
 }
@@ -172,32 +142,125 @@ export default App;
 
 
 
+// import React, { Component } from 'react';
+// import Navbar from './components/Navbar/Navbar';
+// import Body from './components/Body/Body';
+// import Jumbotron from './components/Jumbotron/Jumbotron';
+// import Characters from "./Characters";
+// import Counter from './components/Counter/Counter';
+// // import { escapeComponent } from '../node_modules/uri-js';
 
 
 
-// const App = () => (
-//   <div>
-//   <Navbar/>
-//   <Jumbotron/>
-//   <Counter/>
-//   <Body 
-//   name1={Character[0].name} img1={Character[0].image} info1={Character[0].bio}
+// class App extends Component {
 
-//   name2={Character[1].name} img2={Character[1].image} info2={Character[1].bio}
+//   // establish initial state
+//   state = {
+//     Characters,
+//     count: 0,
+//     clicked: []
+//   };
 
-//   name3={Character[2].name} img3={Character[2].image} info3={Character[2].bio}
+//   constructor(props) {
+//     super(props);
+//     this.shuffleCharacters = this.shuffleCharacters.bind(this);
+//     // this.handleIncrement = this.handleIncrement.bind(this)
+//   }
 
-//   name4={Character[3].name} img4={Character[3].image} info4={Character[3].bio}
+//   shuffleArray(array) {
+//     let i = array.length - 1;
+//     for (; i > 0; i--) {
+//       const j = Math.floor(Math.random() * (i + 1));
+//       const temp = array[i];
+//       array[i] = array[j];
+//       array[j] = temp;
+//     }
+//     return array;
+//   }
 
-//   name5={Character[4].name} img5={Character[4].image} info5={Character[4].bio}
+//   shuffleCharacters(id) {
+//     // e.preventDefault();
+//     console.log("id", id)
+//     console.log("inside App.js shuffleCharacters method", this.state.Characters);
+//     console.log("this.state.count", this.state.count)
+//     let shuffled = this.shuffleArray(this.state.Characters);
 
-//   name6={Character[5].name} img6={Character[5].image} info6={Character[5].bio}
+//     // New code - If code doesnt work - Delete evyerthing below this but keep 
+//     // this.setState({Characters: shuffled}); + this.handleIncrement(e);
+//     // as last lines of code. 
 
-  
-//   />
-//   </div>
-// )
- 
+//     if (this.state.clicked.indexOf(id) === -1) {
+//       console.log("inside if-statement inside shuffleCharacters + Character.id=" + this.name)
+//       console.log("this is props.id", id)
+//       this.setState({
+//         Characters: shuffled,
+//         clicked: [...this.state.clicked, id],
+//         score: this.state.score + 1
+//       })
+//     } else {
+//       this.setState({
+//         Characters: shuffled,
+//         clicked: [],
+//         score: 0
+//       })
+//     }
+//     // this.setState({Characters: shuffled});
+//     // this.handleIncrement(id);
+//     componentDidMount() {
+//     }
+
+//       render() {
+//         return (
+//           <div>
+//           <div>
+//             <div>
+//               <Navbar />
+//               <Jumbotron />
+//               <Counter
+//                 handleClick={this.handleIncrement}
+//                 setState={this.state.count}
+//               />
+//             </div>
+//             <div id="test">
+    
+    
+//               {this.state.Characters.map(Character => (
+//                 <Body
+    
+//                   handleClick={this.shuffleCharacters}
+    
+//                   onClick={this.handleIncrement}
+    
+//                   // Props
+//                   key={Character.id}
+//                   id={Character.id}
+//                   image={Character.image}
+//                   name={Character.name}
+//                   bio={Character.bio}
+    
+    
+//                 />
+//               ))}
+//             </div>
+//           </div>
+//           </div>
+    
+//         )
+//       }
+//     }
+
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
 
 
 
