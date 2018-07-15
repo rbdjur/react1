@@ -55,3 +55,8 @@ The resolution worked when I added the handleIncrement(e) function as the last l
       07/13/2018  12:24
       I took out all of the "e" 's and the e.preventDefault(); commands .  If app is totally broken, may need to address this issue by adding "e" inside the parentheses of the function or adding e.preventDefault();
 
+      07/14/2018
+    I reformatted the logic and layout of my code.  I felt like my code had the right pieces and logic however the order of my code  in my code editor was not optimal.  I restructed my code and renamed a few variables to easily identify and call if necessary.  This is the furthest I have gone.  Right now, I am able to click on a given image, and if I click on the same image again, the score counter increases by one.  
+
+    From this point, I can go multiple ways in the type of game I want to construct. Either I can have the rules call for a score increase by a point by clicking on a matching photo or click on an image and increase score by one point until the user clicks on a picture twice, then will be prompted with an alert and score reset. 
+

@@ -3,13 +3,13 @@
         "id": 1,
         "name": "Night King",
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/1/1f/Night_King_BTW.jpg/revision/latest?cb=20171013162809",
-        "bio": "The Night King is the master and the first of the White Walkers, having existed since the age of the First Men"
+        "bio": "The Night King is the master and the first of the White Walkers, having existed since the age of the First Men."
     }, 
     {
         "id": 2,
         "name": "Tyrion Lannister",
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/5/58/Tyrion_main_s7_e6.jpg/revision/latest?cb=20170818050344",
-        "bio": "Tyrion uses his status as a Lannister to mitigate the prejudice he has received all of his life, even from his family. Knowing that no one will ever take him seriously, he soothes his inadequacies with wine, wit and self-indulgenc"
+        "bio": "Tyrion uses his status as a Lannister to mitigate the prejudice he has received all of his life, even from his family. Knowing that no one will ever take him seriously, he soothes his inadequacies with wine, wit and self-indulgenc."
     },
     {
         "id": 3,
@@ -20,7 +20,7 @@
     {  "id": 4,
         "name": "Cersei Lannister" ,
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c3/Profile-CerseiLannister.png/revision/latest?cb=20170828071355",
-        "bio": "Cersei is a member of House Lannister, one of the wealthiest and most powerful families in the kingdom of Westeros. Cersei's main character attribute is her desire for power and her ambition"
+        "bio": "Cersei is a member of House Lannister, one of the wealthiest and most powerful families in the kingdom of Westeros. Cersei's main character attribute is her desire for power and her ambition."
 
     },
     {

@@ -36,7 +36,7 @@ class Counter extends React.Component {
             // onClick=
           // {this.handleIncrement}
 
-          onClick={this.props.handleClick}
+          // onClick={this.props.handleClick}
           >
             <p className="card-text">Score: 
             {this.props.setState}
