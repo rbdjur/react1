@@ -10,47 +10,24 @@ class Body extends React.Component {
     constructor(props){
         super(props);
     }
-     // Setting the initial state of the Counter component
-    //  state = {
-    //     count: 0,
-    //   };
-
-    // handleIncrement = () => {
-    //     // We always use the setState method to update a component's state
-    //     this.setState({ count: this.state.count + 1 });
-    //   };
 
     render() {
        
 
         return (
  
-            // <div className="card text-center">
-            // <div className="card-body">
-            //   <p className="card-text">Score: {this.state.count}</p>
-            // </div>
-
             <div className="container">
                 <div className="row">
-                    <div className="card text-center" id="main"
-                    
-                    // onClick={() => this.props.stuff}
-
-                    // onClick={this.props.handleClick}
-                    // handleClick={this.props.stuff}
-                    >
+                    <div className="card text-center" id="main">
 
                         <img 
-                        // Working function directly below
                         onClick={this.props.handleClick}
 
-                        // onClick={() => props.handleClick}
-
-                        // handleClick={this.props.onClick} 
                         className="card-img-top" src={this.props.image} alt={this.props.name} />
                         <div className="card-body">
-                            <h5 className="card-title">{this.props.name}</h5>
-                            <p className="card-text">{this.props.bio}</p>
+                            <h5 className="card-title" id="name">{this.props.name}</h5>
+                            <p className="card-text" id="bio">
+                            </p>
                             
                         </div>
                     </div>     

@@ -60,3 +60,52 @@ The resolution worked when I added the handleIncrement(e) function as the last l
 
     From this point, I can go multiple ways in the type of game I want to construct. Either I can have the rules call for a score increase by a point by clicking on a matching photo or click on an image and increase score by one point until the user clicks on a picture twice, then will be prompted with an alert and score reset. 
 
+    07/15/2018 
+    I decided change the point system of my game.  So Before, the game functioned as follows:
+
+    For every click, the user receives one point denoted by increasing the score by one. 
+
+    If the user clicks on a picture twice, the score would not increase and the images would not shuffle.  Without a change in score implies that the user clicked an image twice therefore receiving zero points. 
+
+    Now, I changed the feature of scoring points to the following: 
+
+    If the user clicks on a "new" picture, the user receives one point. 
+
+    If the user clicks on an "old" picture, the user loses one point. 
+
+    As of right now, the user must remember the last picture clicked, so the user does not click that picture again and loses one point.  
+
+    I am thinking about adding a countdown timer to increase the level of challenge.  This will create a challenge for the user as the user must race against time, while remembering which GoT character they clicked on, while searching for a new character in the row of reshuffled characters after every click. 
+
+    Also, in the instructions say that the user can get a best score of 9 since there are 9 characters, assuming the user commits zero errors.
+
+
+    I was struggling adding a negative consequence to my game.  I want to add a negative consequence because at the time, the application increased the score counter by one for every new image clicked.  There was not a timer or a negative result which made the challenge very minimal.  
+
+    However, the code needed to invoke this function required moving code around. 
+
+    I used an if-else if statement with two possible outcomes:
+
+    1. if (this.state.clicked.indexOf(id) === -1) {}
+
+    if the user clicks on a new picture (new - keep a record on the id of the character), change the state of the score by increasing counter by one. 
+    - I put the handleIncrement(id) fxn inside the first if statement, followed by this.setState({
+
+        Characters: shuffled,
+        clicked: [... this.state.clicked, id],
+        score: this.state.score + 1 
+    })
+
+
+
+    " OR " 
+
+
+    2. else if (this.state.Characters === this.state.Characters) {}
+
+    So each time the user clicked a new picture, the "click" state (denoted by this.state.clicked) of the app changed.  After every clicked character image, that given character was inserted into  this.state.clicked array.  
+    - Therefore, I created an else-if statement with the conditions that - if this.state.Characters === this.state.Characters (meaning that if the user clicked character A and put character A inside the "this.state.clicked" array, on the next click, if the user clicked character A again, resulting in "this.state.clicked" matching "this.state.clicked" from the previous click ), decrease the score counter by one point.  
+
+    The most challenging part was the javascript syntax and logic of assigning what parameter to another paramater in the conditional statement of the else if ().  
+
+    

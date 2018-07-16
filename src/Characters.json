@@ -9,25 +9,25 @@
         "id": 2,
         "name": "Tyrion Lannister",
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/5/58/Tyrion_main_s7_e6.jpg/revision/latest?cb=20170818050344",
-        "bio": "Tyrion uses his status as a Lannister to mitigate the prejudice he has received all of his life, even from his family. Knowing that no one will ever take him seriously, he soothes his inadequacies with wine, wit and self-indulgenc."
+        "bio": "Tyrion uses his status as a Lannister to mitigate the prejudice he has received all of his life, even from his family."
     },
     {
         "id": 3,
         "name": "John Snow",
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/a/a5/Profile-JonSnow-707.png/revision/latest?cb=20170828030553",
-        "bio": "In A Game of Thrones, Jon Snow is introduced as the 14-year-old illegitimate son of Eddard Ned Stark, Lord of Winterfell,[3][4] and half-brother to Robb, Sansa, Arya, Bran and Rickon."
+        "bio": "In A Game of Thrones, Jon Snow is introduced as the 14-year-old illegitimate son of Eddard Ned Stark, Lord of Winterfell."
     },
     {  "id": 4,
         "name": "Cersei Lannister" ,
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c3/Profile-CerseiLannister.png/revision/latest?cb=20170828071355",
-        "bio": "Cersei is a member of House Lannister, one of the wealthiest and most powerful families in the kingdom of Westeros. Cersei's main character attribute is her desire for power and her ambition."
+        "bio": "Cersei is a member of House Lannister, one of the wealthiest and most powerful families in the kingdom of Westeros."
 
     },
     {
         "id": 5,
         "name": "Arya Stark" ,
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/5/54/Arya_the_dragon_and_the_wolf_s7.jpg/revision/latest?cb=20170828062911",
-        "bio": "She is tomboyish, headstrong, feisty, independent, disdains traditional female pursuits, and is often mistaken for a boy. She wields a smallsword named Needle, a gift from her half-brother, Jon Snow, and is trained in the Braavosi style of sword fighting by Syrio Forel."
+        "bio": "She is tomboyish, headstrong, feisty, independent, disdains traditional female pursuits, and is often mistaken for a boy."
 
     },
     {
@@ -36,5 +36,26 @@
         "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/5/5f/Daenerys_Dragonpit.jpg/revision/latest?cb=20171015095128",
         "bio": "Daenerys is sold off by her brother Viserys and Illyrio Mopatis to marry Khal Drogo, a Dothraki warlord, in exchange for an army for Viserys."
 
+    },
+    {
+        "id": 7,
+        "name": "Gregor Clegane",
+        "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/b/be/Gregor_Clegane_4x07.jpg/revision/latest?cb=20140707234843",
+        "bio": "Daenerys is sold off by her brother Viserys and Illyrio Mopatis to marry Khal Drogo, a Dothraki warlord, in exchange for an army for Viserys."
+    },
+    {
+        "id": 8,
+        "name": "Sansa Stark",
+        "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/7/7e/Sansastark706.jpg/revision/latest?cb=20170828072803",
+        "bio": "Sansa Stark is the eldest daughter and second child of Lady Catelyn and Lord Eddard Stark."
+    },
+    {
+        "id": 9,
+        "name": "Drogo",
+        "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/1/1f/Drogo_1x01b.jpg/revision/latest?cb=20110626031733",
+        "bio": "Drogo is a khal or warlord of the Dothraki, the famed nomadic horse-lords of the eastern continent beyond the Narrow Sea."
     }
+
+
+
 ]
